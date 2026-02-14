@@ -3,42 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VervalPD Pro-Helper</title>
+    <title>VervalPD Match-Unlock</title>
     <style>
         :root { --primary: #1a5276; --secondary: #27ae60; --grey-light: #94a3b8; --text: #2c3e50; }
-        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.4; color: var(--text); max-width: 700px; margin: 20px auto; padding: 15px; background-color: #f0f4f8; }
-        .card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #e1e8ed; }
-        .header-text { margin-bottom: 15px; font-size: 0.95em; text-align: justify; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.4; color: var(--text); max-width: 680px; margin: 15px auto; padding: 10px; background-color: #f0f4f8; overflow: hidden; }
+        .card { background: white; border-radius: 12px; padding: 22px 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border: 1px solid #e1e8ed; position: relative; }
+        
+        /* Ukuran Foto Logo Proporsional */
+        .logo-container { text-align: center; margin-bottom: 15px; }
+        .profile-logo { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 1px solid #000000; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+        .profile-logo:hover { transform: scale(1.05); }
+
+        .header-text { margin-bottom: 15px; font-size: 0.93em; text-align: justify; }
         .highlight-blue { color: #0056b3; font-weight: bold; }
-        .func-list { margin: 10px 0; padding-left: 20px; }
+        .func-list { margin: 8px 0; padding-left: 20px; }
         .func-1 { color: var(--secondary); font-weight: bold; }
         .func-2 { color: #1a5276; font-weight: bold; }
-        .bookmark-container { text-align: center; padding: 25px; background: #f8fafc; border-radius: 10px; border: 2px dashed #cbd5e1; margin-top: 10px; }
-        .bookmark-btn { display: inline-block; padding: 12px 28px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; font-weight: 700; border-radius: 8px; cursor: move; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3); transition: all 0.2s ease; font-size: 1.1em; }
+        .bookmark-container { text-align: center; padding: 20px; background: #f8fafc; border-radius: 10px; border: 2px dashed #cbd5e1; margin-top: 8px; }
+        .bookmark-btn { display: inline-block; padding: 11px 26px; background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); color: white; text-decoration: none; font-weight: 700; border-radius: 8px; cursor: move; box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3); transition: all 0.2s ease; font-size: 1.05em; }
         .bookmark-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4); }
-        .instruction { margin-top: 12px; font-size: 0.85em; color: #64748b; font-weight: 500; }
-        .footer { margin-top: 15px; text-align: center; font-size: 0.85em; color: #94a3b8; }
+        .instruction { margin-top: 10px; font-size: 0.82em; color: #64748b; font-weight: 500; }
+        .footer { margin-top: 15px; text-align: center; font-size: 0.82em; color: #94a3b8; }
         .dev-name { color: #0056b3; font-weight: bold; }
-        p { margin: 8px 0; }
+        p { margin: 7px 0; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <div class="header-text">
-        <p>Berikut adalah bookmarklet interaktif yang dirancang khusus untuk mempermudah navigasi pada situs VervalPD. Alat ini memiliki dua fungsi utama:</p>
-        <div class="func-list">
-            <p>1. <span class="func-1">Memadankan data secara manual (terdeteksi data signifikan).</span></p>
-            <p>2. <span class="func-2">Membuka kuncian input NIK.</span></p>
-        </div>
-        <p>Dikembangkan oleh <span class="highlight-blue">Andizzul Abu Ammar</span> (Operator SMP Negeri 1 Bulukumba), tools ini hadir untuk mendukung efisiensi kerja rekan-rekan operator dalam mengelola data murid.</p>
-        <p>Perlu dicatat bahwa tools ini sepenuhnya aman dan tidak melanggar aturan, karena tidak mengubah data asli pada sistem. Fungsinya hanyalah menyederhanakan alur kerja yang biasanya dilakukan mandiri oleh siswa di situs NISN, dengan tetap mengacu pada data resmi server Disdukcapil Indonesia.</p>
-    </div>
-    <p>Silakan dibagikan agar manfaatnya dapat dirasakan lebih luas. Terima kasih!</p>
+    <div class="logo-container">
+        <img src="FotoLogo.jpg" alt="Logo" class="profile-logo">
     </div>
 
+    <div class="header-text">
+        <p>Bookmarklet interaktif ini dikembangkan secara khusus untuk membantu proses verifikasi dan validasi data pada laman vervalPD, terutama dalam penanganan kriteria residu Nomor Induk Kependudukan (NIK).</p>
+        
+        <p>Terdapat dua fungsi utama yang dihadirkan:</p>
+        
+        <div class="func-list">
+            <p>1. <span class="func-1">Memadankan data yang terindikasi memiliki perbedaan signifikan.</span></p>
+            <p>2. <span class="func-2">Membuka kuncian input Nomor Induk Kependudukan (NIK).</span></p>
+        </div>
+        
+        <p>Dikembangkan oleh <span class="highlight-blue">Andizzul Abu Ammar</span>, tools ini hadir untuk mendukung efisiensi kerja rekan-rekan operator dalam mengelola data murid di vervalPD.</p>
+        
+        <p>Perlu kami tegaskan bahwa penggunaan alat bantu ini sepenuhnya aman dan tidak bertentangan dengan ketentuan yang berlaku. Fungsinya semata-mata untuk menyederhanakan alur kerja yang selama ini dapat dilakukan secara mandiri oleh murid melalui laman resmi NISN, dengan tetap merujuk pada data valid dari Dukcapil Indonesia. Bookmarklet ini tidak mengubah data asli dalam sistem, melainkan hanya mengoptimalkan proses input.</p>
+    </div>
+    
+    <p>Silakan dibagikan agar manfaatnya dapat dirasakan lebih luas. Terima kasih.</p>
+    
     <div class="bookmark-container">
-        <a class="bookmark-btn" href="javascript:(function(){var style=document.createElement('style');style.id='gemini-style';style.innerHTML='#gemini-menu{position:fixed;top:20%;left:50%;transform:translate(-50%,-50%);z-index:9999;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.15);font-family:sans-serif;text-align:center;min-width:320px;}.g-flex{display:flex;justify-content:center;gap:12px;margin-top:15px;}.g-btn{padding:10px 20px;cursor:pointer;border:none;border-radius:8px;color:white;font-weight:600;font-size:13px;transition:0.2s;}.g-edit{background-color:#27ae60;}.g-unlock{background-color:#1a5276;}.g-close{background-color:#f1f5f9;color:#64748b;margin-top:18px;width:80px;font-size:11px;border:1px solid #e2e8f0;}.g-btn:hover{opacity:0.9;transform:translateY(-1px);}.g-close:hover{background-color:#e2e8f0;color:#475569;}';document.head.appendChild(style);var menu=document.createElement('div');menu.id='gemini-menu';menu.innerHTML='<h4 style=&quot;margin-top:0;color:#2c3e50;font-size:15px;letter-spacing:0.5px;&quot;>Pilih Tombol Aksi</h4><div class=&quot;g-flex&quot;><button class=&quot;g-btn g-edit&quot; id=&quot;btn-edit&quot;>Padankan</button><button class=&quot;g-btn g-unlock&quot; id=&quot;btn-unlock&quot;>Unlock NIK</button></div><button class=&quot;g-btn g-close&quot; id=&quot;btn-close&quot;>Tutup</button>';document.body.appendChild(menu);function bersihLayar(){var m=document.getElementById('gemini-menu');var s=document.getElementById('gemini-style');if(m)m.remove();if(s)s.remove();}document.getElementById('btn-unlock').onclick=function(){var inputs=document.querySelectorAll('input');var found=false;inputs.forEach(el=>{if(el.name&&el.name.toLowerCase().includes('nik')||el.id&&el.id.toLowerCase().includes('nik')||el.placeholder&&el.placeholder.toLowerCase().includes('nik')){el.removeAttribute('readonly');el.removeAttribute('disabled');el.style.backgroundColor='#fff9c4';found=true;}});if(found){alert('Input NIK telah terbuka!');}else{alert('Input NIK tidak ditemukan. Pastikan Anda di halaman formulir.');}bersihLayar();};document.getElementById('btn-edit').onclick=function(){var targets=['NAMA','TEMPAT LAHIR','TANGGAL LAHIR','NAMA IBU KANDUNG','JENIS KELAMIN','KEWARGANEGARAAN','KABUPATEN/KOTA','KECAMATAN','DESA/KELURAHAN'];var trs=document.querySelectorAll('tr');trs.forEach(tr=>{var tds=tr.querySelectorAll('td');if(tds.length>=2){var label=tds[0].innerText.trim().toUpperCase();if(targets.includes(label)){var kolomKiri=tds[1];if(!kolomKiri.querySelector('input')){var val=kolomKiri.innerText.trim();kolomKiri.innerHTML='<input type=&quot;text&quot; class=&quot;form-control&quot; style=&quot;width:100%; border:1px solid #27ae60; background:#f0fff4; padding:2px 8px; height:30px; font-size:12px; border-radius:4px;&quot; value=&quot;'+val+'&quot;>';}}}});alert('Kolom Kiri Sudah aktif!');bersihLayar();};document.getElementById('btn-close').onclick=function(){bersihLayar();};})();">Unlock-Match</a>
+        <a class="bookmark-btn" onclick="return false;" href="javascript:(function(){var style=document.createElement('style');style.id='gemini-style';style.innerHTML='#gemini-menu{position:fixed;top:20%;left:50%;transform:translate(-50%,-50%);z-index:9999;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:20px;box-shadow:0 10px 30px rgba(0,0,0,0.15);font-family:sans-serif;text-align:center;min-width:320px;}.g-flex{display:flex;justify-content:center;gap:12px;margin-top:15px;}.g-btn{padding:10px 20px;cursor:pointer;border:none;border-radius:8px;color:white;font-weight:600;font-size:13px;transition:0.2s;}.g-edit{background-color:#27ae60;}.g-unlock{background-color:#1a5276;}.g-close{background-color:#f1f5f9;color:#64748b;margin-top:18px;width:80px;font-size:11px;border:1px solid #e2e8f0;}.g-btn:hover{opacity:0.9;transform:translateY(-1px);}.g-close:hover{background-color:#e2e8f0;color:#475569;}';document.head.appendChild(style);var menu=document.createElement('div');menu.id='gemini-menu';menu.innerHTML='<h4 style=&quot;margin-top:0;color:#2c3e50;font-size:15px;letter-spacing:0.5px;&quot;>Pilih Tombol Aksi</h4><div class=&quot;g-flex&quot;><button class=&quot;g-btn g-edit&quot; id=&quot;btn-edit&quot;>Padankan</button><button class=&quot;g-btn g-unlock&quot; id=&quot;btn-unlock&quot;>Unlock NIK</button></div><button class=&quot;g-btn g-close&quot; id=&quot;btn-close&quot;>Tutup</button>';document.body.appendChild(menu);function bersihLayar(){var m=document.getElementById('gemini-menu');var s=document.getElementById('gemini-style');if(m)m.remove();if(s)s.remove();}document.getElementById('btn-unlock').onclick=function(){var inputs=document.querySelectorAll('input');var found=false;inputs.forEach(el=>{if(el.name&&el.name.toLowerCase().includes('nik')||el.id&&el.id.toLowerCase().includes('nik')||el.placeholder&&el.placeholder.toLowerCase().includes('nik')){el.removeAttribute('readonly');el.removeAttribute('disabled');el.style.backgroundColor='#fff9c4';found=true;}});if(found){alert('Input NIK telah terbuka!');}else{alert('Input NIK tidak ditemukan.');}bersihLayar();};document.getElementById('btn-edit').onclick=function(){var targets=['NIK','NAMA','TEMPAT LAHIR','TANGGAL LAHIR','NAMA IBU KANDUNG','JENIS KELAMIN','KEWARGANEGARAAN','KABUPATEN/KOTA','KECAMATAN','DESA/KELURAHAN'];var trs=document.querySelectorAll('tr');var count=0;var errorNIK='';trs.forEach(tr=>{var tds=tr.querySelectorAll('td');if(tds.length>=3){var label=tds[0].innerText.trim().toUpperCase();if(targets.includes(label)){var colLama=tds[1];var colBaru=tds[2];var valBaru='';if(label==='JENIS KELAMIN'){var checkedRadio=colBaru.querySelector('input[type=&quot;radio&quot;]:checked');valBaru=checkedRadio?checkedRadio.value:'';}else{var inputBaru=colBaru.querySelector('input, select');if(inputBaru){if(inputBaru.tagName==='SELECT'){valBaru=inputBaru.options[inputBaru.selectedIndex].text;}else{valBaru=inputBaru.value;}}}if(valBaru!==''&&valBaru!==undefined){valBaru=valBaru.trim();if(label==='NIK'){if(valBaru.length!==16){errorNIK='Peringatan: NIK di kolom BARU tidak berjumlah 16 digit!';}var htmlAsli=colLama.innerHTML;if(htmlAsli.includes('<br>')){var parts=htmlAsli.split('<br>');colLama.innerHTML=valBaru+'<br>'+parts.slice(1).join('<br>');}else if(htmlAsli.includes('(')){var idx=htmlAsli.indexOf('(');colLama.innerHTML=valBaru+'<br>'+htmlAsli.substring(idx);}else{colLama.innerText=valBaru;}}else{colLama.innerText=valBaru;}count++;}}}});if(count>0){var msg=count+' Data telah dipadankan!';if(errorNIK!==''){msg+='\n\n'+errorNIK;}alert(msg);}else{alert('Data tidak ditemukan.');}bersihLayar();};document.getElementById('btn-close').onclick=function(){bersihLayar();};})();">Match-Unlock</a>
         <p class="instruction">Tarik tombol hijau di atas ke bilah bookmark browser Anda.</p>
     </div>
 
@@ -49,7 +64,3 @@
 
 </body>
 </html>
-
-
-
-
